@@ -7,51 +7,93 @@
 </head>
 
 <body>
-  <table width="100%">
-    <tbody>
-      <tr>
-        <td valign="top">
-          <ul>
-            <li><a href="/Kanbas/Account/Profile/index.html">Accounts</a></li>
-            <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
-            <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-        </td>
-        <td valign="top">
-          <ul>
-            <li><a href="#">Notifications</a></li>
-            <li><a href="/Kanbas/Account/Profile/index.html">Profile</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="/Kanbas/Courses/Settings/Details/screen.html">Settings</a></li>
-            <li><a href="#">ePortfolios</a></li>
-            <li><a href="#">Shared Content</a></li>
-            <li><a href="#">The Hub</a></li>
-            <li><a href="#">Qwickly Course Tools</a></li>
-            <li><a href="#">Global Announcements</a></li>
-          </ul>
-        </td>
-        <td>
-        <td>
-            <h3>Samuel Tomlinson<h3>
-                <button onclick="window.location.href='/Kanbas/Account/Profile/edit.html';">Edit Profile</button>
-            <h1>Samuel Tomlinson</h1>
-            <h2>Contact</h2>
-            <div>No reigstered services, you can add some on the <a href="#">settings</a> page.</div>
-            <h2>Biography</h2>
-            <div>Student, Software Engineer, AI, Space</div>
-            <h2>Links</h2>
-            <div><a href="www.youtube.com">YouTube</a></div>
-            
-        </td>
-          
-    </tbody>
-  </table>
+  <div class="wd-flex-row-container">
+
+    <div class="d-none d-md-block">
+      <link rel="stylesheet" href="/styles.css" />
+      <link rel="stylesheet" href="/kanbas/Account/Profile/index.css" />
+      <link rel="stylesheet" href="/kanbas/KanbasNavigation/index.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="/vendors/bootstrap/bootstrap.min.css">
+
+      <ul class="wd-kanbas-navigation">
+        <li class="wd-active">
+          <i class="fa-regular fa-user"></i><br>
+          <a href="/Kanbas/Account/Profile/index.html">Account</a>
+        </li>
+        <li>
+          <i class="fa fa-gauge"></i><br>
+          <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+        </li>
+        <li>
+          <i class="fa fa-book"></i><br>
+          <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+        </li>
+        <li>
+          <i class="fa fa-calendar"></i><br>
+          <a href="#">Calendar</a>
+        </li>
+        <li>
+          <i class="fa fa-inbox"></i><br>
+          <a href="#">Inbox</a>
+        </li>
+        <li>
+          <i class="fa fa-clock"></i><br>
+          <a href="#">History</a>
+        </li>
+        <li>
+          <i class="fa fa-camera"></i><br>
+          <a href="#">Studio</a>
+        </li>
+        <li>
+          <i class="fa fa-arrow-up-right-from-square"></i><br>
+          <a href="#">Commons</a>
+        </li>
+        <li>
+          <i class="fa fa-circle-info"></i><br>
+          <a href="#">Help</a>
+        </li>
+      </ul>
+    </div>
+    <div class="d-none d-md-block">
+      <link rel="stylesheet" href="/styles.css" />
+      <link rel="stylesheet" href="/kanbas/Courses/CourseNavigation/index.css" />
+      <ul class="wd-course-navigation">
+        <li><a href="#">Notifications</a></li>
+        <li class="wd-active"><a href="/Kanbas/Account/Profile/index.html">Profile</a></li>
+        <li><a href="#">Files</a></li>
+        <li><a href="/Kanbas/Courses/Settings/Details/screen.html">Settings</a></li>
+        <li><a href="#">ePortfolios</a></li>
+        <li><a href="#">Shared Content</a></li>
+        <li><a href="#">The Hub</a></li>
+        <li><a href="#">Qwickly Course Tools</a></li>
+        <li><a href="#">Global Announcements</a></li>
+      </ul>
+    </div>
+    <div class="wd-flex-grow-1">
+      <div class="wd-header-container">
+
+
+        <i class="fa-regular fa-user fa-10x"></i>
+        <button class="btn btn-secondary float-end" onclick="window.location.href='/Kanbas/Account/Profile/edit.html';"><i
+            class="fa-solid fa-pencil"></i>Edit
+          Profile</button>
+      </div>
+      <h3>Samuel Tomlinson<h3>
+
+          <h1>Samuel Tomlinson</h1>
+          <h2>Contact</h2>
+          <div>No reigstered services, you can add some on the <a href="#">settings</a> page.</div>
+          <h2>Biography</h2>
+          <div>Student, Software Engineer, AI, Space</div>
+          <h2>Links</h2>
+          <div><a href="https://www.youtube.com/@WebDevTV">YouTube</a></div>
+
+    </div>
+
+  </div>
 
 </body>
 

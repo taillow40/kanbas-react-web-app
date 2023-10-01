@@ -1,0 +1,17 @@
+.navbar .active{
+    color: black;
+}
+.navbar .navbar-nav .nav-link{
+    color: red;
+}
+
+.navbar .navbar-nav .active .nav-link{
+    color: black;
+}
+.wd-edit-inputs .row {
+    padding-top: 10px;
+}
+
+.wd-flex-grow-1 {
+    max-width: 60%;
+}

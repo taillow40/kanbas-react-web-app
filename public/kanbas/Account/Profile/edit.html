@@ -7,89 +7,117 @@
 </head>
 
 <body>
-  <table width="100%">
-    <tbody>
-      <tr>
-        <td valign="top">
-          <ul>
-            <li><a href="/Kanbas/Account/Profile/index.html">Accounts</a></li>
-            <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
-            <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-        </td>
-        <td valign="top">
-          <ul>
-            <li><a href="#">Notifications</a></li>
-            <li><a href="/Kanbas/Account/Profile/index.html">Profile</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="/Kanbas/Courses/Settings/Details/screen.html">Settings</a></li>
-            <li><a href="#">ePortfolios</a></li>
-            <li><a href="#">Shared Content</a></li>
-            <li><a href="#">The Hub</a></li>
-            <li><a href="#">Qwickly Course Tools</a></li>
-            <li><a href="#">Global Announcements</a></li>
-          </ul>
-        </td>
-        <td>
-        <td>
-          <h1>Samuel Tomlinson</h1>
+  <div class="wd-flex-row-container">
 
-          <label>Name:*</label> <input type="text" name="name" value="Samuel Tomlinson">
-          <label>Pronouns:</label>
-          <select>
-            <option value="Edit">He/him</option>
-          </select>
-          <br>
-          <label>Title:</label><input type="text" name="name" value="Samuel Tomlinson">
+    <div class="d-none d-md-block">
+      <link rel="stylesheet" href="/styles.css" />
+      <link rel="stylesheet" href="/kanbas/KanbasNavigation/index.css" />
+      <link rel="stylesheet" href="/kanbas/Account/Profile/index.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/vendors/bootstrap/bootstrap.min.css">
 
-          <h2>Contact</h2>
-          <div>No reigstered services, you can add some on the <a href="#">settings</a> page.</div>
-          <h2>Contact</h2>
-          <div>No reigstered services, you can add some on the <a href="#">settings</a> page.</div>
-          <h2>Biography</h2>
-          <textarea>Student, Software Engineer, AI, Space</textarea>
-          <h2>Links</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>URL</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="text" name="name" value="Youtube"></td>
-                <td><input type="text" name="name" value="www.youtube.com"></td>
-                <td><a href="#">Remove</a></td>
-              </tr>
-              <tr><button>Add another link</button></tr>
-              <tr>
-                <td>
-                  <button>Cancel</button>
-                </td>
-                <td>
-                  <button onclick="window.location.href='index.html';">Save Profile</button>
-                </td>
-              </tr>
-              <td>
-                <button>Edit Profile</button>
-              </td>
-              <td>
-                <button onclick="window.location.href='index.html';">Cancel Editing</button>
-              </td>
-            </tbody>
-          </table>
+      <ul class="wd-kanbas-navigation">
+        <li class="wd-active">
+          <i class="fa-regular fa-user"></i><br>
+          <a href="/Kanbas/Account/Profile/index.html">Account</a>
+        </li>
+        <li>
+          <i class="fa fa-gauge"></i><br>
+          <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+        </li>
+        <li>
+          <i class="fa fa-book"></i><br>
+          <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+        </li>
+        <li>
+          <i class="fa fa-calendar"></i><br>
+          <a href="#">Calendar</a>
+        </li>
+        <li>
+          <i class="fa fa-inbox"></i><br>
+          <a href="#">Inbox</a>
+        </li>
+        <li>
+          <i class="fa fa-clock"></i><br>
+          <a href="#">History</a>
+        </li>
+        <li>
+          <i class="fa fa-camera"></i><br>
+          <a href="#">Studio</a>
+        </li>
+        <li>
+          <i class="fa fa-arrow-up-right-from-square"></i><br>
+          <a href="#">Commons</a>
+        </li>
+        <li>
+          <i class="fa fa-circle-info"></i><br>
+          <a href="#">Help</a>
+        </li>
+      </ul>
+    </div>
+    <div class="d-none d-md-block">
+      <link rel="stylesheet" href="/styles.css" />
+      <link rel="stylesheet" href="/kanbas/Courses/CourseNavigation/index.css" />
+      <ul class="wd-course-navigation">
+        <li><a href="#">Notifications</a></li>
+        <li class="wd-active"><a href="/Kanbas/Account/Profile/index.html">Profile</a></li>
+        <li><a href="#">Files</a></li>
+        <li><a href="/Kanbas/Courses/Settings/Details/screen.html">Settings</a></li>
+        <li><a href="#">ePortfolios</a></li>
+        <li><a href="#">Shared Content</a></li>
+        <li><a href="#">The Hub</a></li>
+        <li><a href="#">Qwickly Course Tools</a></li>
+        <li><a href="#">Global Announcements</a></li>
+      </ul>
+    </div>
+    <div class="wd-flex-grow-1">
+      <div class="wd-header-container">
 
-        </td>
 
-    </tbody>
-  </table>
+        <i class="fa-regular fa-user fa-10x"></i>
+        <button class="btn btn-secondary float-end"
+          onclick="window.location.href='/Kanbas/Account/Profile/index.html';"><i class="fa-solid fa-pencil"></i>Cancel Editing</button>
+      </div>
+      <h1>Samuel Tomlinson</h1>
+
+      <label>Name:*</label> <input class='form-control' type="text" name="name" value="Samuel Tomlinson">
+      <label>Pronouns:</label>
+      <select>
+        <option value="Edit">He/him</option>
+      </select>
+      <br>
+      <label>Title:</label><input class='form-control' type="text" name="name" value="Samuel Tomlinson">
+
+      <h2>Contact</h2>
+      <div>No reigstered services, you can add some on the <a href="#">settings</a> page.</div>
+      <h2>Contact</h2>
+      <div>No reigstered services, you can add some on the <a href="#">settings</a> page.</div>
+      <h2>Biography</h2>
+      <textarea  class='form-control'>Student, Software Engineer, AI, Space</textarea>
+      <h2>Links</h2>
+      <div class="container wd-link-container">
+        <div class="row">
+          <div class="col">Title</div>
+          <div class="col">URL</div>
+          <div class="col"></div>
+          <div class="w-100"></div>
+          <div class="col"><input type="text" name="name" value="Youtube"></div>
+          <div class="col"><input type="text" name="name" value="www.youtube.com"></div>
+          <div class="col"><a href="#">Remove</a></div>
+          <div class="w-100"></div>
+          <div class="col"><button class="btn btn-secondary">Add another link</button></button></div>
+          <div class="w-100"></div>
+          <div class="col"><button class="btn btn-secondary">Cancel</button></div>
+          <div class="col"><button class="btn btn-danger" onclick="window.location.href='index.html';">Save Profile</button></div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 
 </body>
 
