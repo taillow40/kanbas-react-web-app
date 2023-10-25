@@ -29,7 +29,6 @@ function Home() {
   return (
     <div className='wd-home-grid'>
       <div className="wd-home-modules">
-        <button className="btn btn-secondary float-end mx-1"><FaEllipsisV/></button>
         <button className="btn btn-danger float-end mx-1"><AiOutlinePlus/>Module</button>
           <div className="dropdown float-end mx-1">
             <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -53,7 +52,7 @@ function Home() {
         <h1>Course Status</h1>
         <ul className="wd-no-bullets">
         {statusButtons.map((buttonText, index) => (
-                <li className=" wd-course-status-list"key={index}><a href="#" className='btn btn-secondary'>{statusIcons[index]}{buttonText}</a></li>
+                <li className="wd-course-status-list"key={index}><a href="#" className='btn btn-secondary'>{statusIcons[index]}{buttonText}</a></li>
             ))}
         </ul>
         <h2>Coming Up</h2>

@@ -1,73 +1,84 @@
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import db from "src/Kanbas/Database";
+import { useSelector, useDispatch } from "react-redux";
 import "./index.css"
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+} from "src/Kanbas/Courses/Assignments/assignmentsReducer";
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
-  const assignment = db.assignments.find(
-    (assignment) => assignment._id === assignmentId);
-
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  const dispatch = useDispatch();
 
   const { courseId } = useParams();
+
   const navigate = useNavigate();
   const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
+    let oldAssignment = assignments.find((assignment) => assignment._id === assignmentId);
+    (oldAssignment) ? dispatch(updateAssignment(assignment)) : dispatch(addAssignment({ ...assignment, course: courseId }));
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+
   return (
     <div>
       <h2>Assignment Name</h2>
       <input value={assignment.title}
-             className="form-control mb-2" />
-      <textarea class="form-control">This is the Assignment Description</textarea>
-      <div class="wd-edit-inputs container">
-        <div class="row">
-          <div class="col">
-            <div class="float-end my-2">Points</div>
+             className="form-control mb-2"
+             onChange={(e) => dispatch(setAssignment({ ...assignment, title: e.target.value }))} />
+      <textarea className="form-control" onChange={(e) => dispatch(setAssignment({ ...assignment, description: e.target.value }))}>
+        This is the Assignment Description</textarea>
+      <div className="wd-edit-inputs container">
+        <div className="row">
+          <div className="col">
+            <div className="float-end my-2">Points</div>
           </div>
-          <div class="col">
-            <input type="number" value="100" class="form-control w-50"></input>
+          <div className="col">
+            <input type="number" value="100" className="form-control w-50"></input>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="float-end my-2">Assignment Group</div>
+        <div className="row">
+          <div className="col">
+            <div className="float-end my-2">Assignment Group</div>
           </div>
-          <div class="col">
-            <select class="form-control w-50">
+          <div className="col">
+            <select className="form-control w-50">
               <option value="Edit">ASSIGNMENTS</option>
             </select>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="float-end my-2">Display Grade As</div>
+      <div className="row">
+        <div className="col">
+          <div className="float-end my-2">Display Grade As</div>
         </div>
-        <div class="col">
-          <select class="form-control w-50">
+        <div className="col">
+          <select className="form-control w-50">
             <option value="Edit">Percentage</option>
           </select>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="float-end my-2">Submission Type</div>
+      <div className="row">
+        <div className="col">
+          <div className="float-end my-2">Submission Type</div>
         </div>
-        <div class="col">
-          <select class="form-control w-50">
+        <div className="col">
+          <select className="form-control w-50">
             <option value="Edit">Percentage</option>
           </select>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="float-end my-2">Online Entry Options</div>
+      <div className="row">
+        <div className="col">
+          <div className="float-end my-2">Online Entry Options</div>
         </div>
-        <div class="col">
+        <div className="col">
           <input type="checkbox" value="TEXT_ENTRY" name="check-genre" id="chkbox-text-entry" checked />
           <label for="chkbox-text-entry">Text Entry</label> <br />
           <input type="checkbox" value="WEBSITE_URL" name="check-genre" id="chkbox-website-url" />
@@ -81,81 +92,81 @@ function AssignmentEditor() {
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="float-end my-2">Submission Attempts</div>
+      <div className="row">
+        <div className="col">
+          <div className="float-end my-2">Submission Attempts</div>
         </div>
-        <div class="col">
-          <select class="form-control w-50">
+        <div className="col">
+          <select className="form-control w-50">
             <option value="Edit">Unlimited</option>
           </select>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="float-end my-2">Plagiarism Review</div>
+      <div className="row">
+        <div className="col">
+          <div className="float-end my-2">Plagiarism Review</div>
         </div>
-        <div class="col">
-          <select class="form-control w-50">
+        <div className="col">
+          <select className="form-control w-50">
             <option value="Edit">None</option>
           </select>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="float-end my-2">Group Assignment</div>
+      <div className="row">
+        <div className="col">
+          <div className="float-end my-2">Group Assignment</div>
         </div>
-        <div class="col">
+        <div className="col">
           <input type="checkbox" value="COMEDY" name="check-genre" id="chkbox-comedy" checked />
           <label for="chkbox-group">This is a group assignment</label>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="float-end my-2">Peer Reviews</div>
+      <div className="row">
+        <div className="col">
+          <div className="float-end my-2">Peer Reviews</div>
         </div>
-        <div class="col">
+        <div className="col">
           <input type="checkbox" value="COMEDY" name="check-genre" id="chkbox-comedy" checked />
           <label for="chkbox-peer">Require Peer Reviews</label>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="float-end my-2">Assign To</div>
+      <div className="row">
+        <div className="col">
+          <div className="float-end my-2">Assign To</div>
         </div>
-        <div class="col">
-          <input class="form-control w-50" value="Everyone" />
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <div class="float-end my-2">Due</div>
-        </div>
-        <div class="col">
-          <input type="date" value="2021-01-01" class="form-control w-50" />
+        <div className="col">
+          <input className="form-control w-50" value="Everyone" />
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="float-end my-2">Available From</div>
+      <div className="row">
+        <div className="col">
+          <div className="float-end my-2">Due</div>
         </div>
-        <div class="col">
-          <input type="date" value="2021-01-01" class="form-control w-50" />
+        <div className="col">
+          <input type="date" value="2021-01-01" className="form-control w-50" />
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="float-end my-2">Available To</div>
+      <div className="row">
+        <div className="col">
+          <div className="float-end my-2">Available From</div>
         </div>
-        <div class="col">
-          <input type="date" value="2021-01-01" class="form-control w-50" />
+        <div className="col">
+          <input type="date" value="2021-01-01" className="form-control w-50" onChange={(e) => dispatch(setAssignment({ ...assignment, availiableFrom: e.target.value }))}/>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col">
+          <div className="float-end my-2">Available To</div>
+        </div>
+        <div className="col">
+          <input type="date" value="2021-01-01" className="form-control w-50" onChange={(e) => dispatch(setAssignment({ ...assignment, avaliableTo: e.target.value }))}/>
         </div>
       </div>
 
