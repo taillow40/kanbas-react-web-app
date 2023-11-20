@@ -6,6 +6,7 @@ import { Routes, Route, Navigate } from "react-router";
 import store from "./store";
 import Nav from "src/Nav";
 import { Provider } from "react-redux";
+import Quiz from "./Quiz";
 
 function Labs() {
   return (
@@ -17,6 +18,7 @@ function Labs() {
           <Route path="a3" element={<Assignment3 />} />
           <Route path="a4" element={<Assignment4 />} />
           <Route path="a5" element={<Assignment5 />} />
+          <Route path="quiz" element={<Quiz />} />
         </Routes>
       </div>
     </Provider>
