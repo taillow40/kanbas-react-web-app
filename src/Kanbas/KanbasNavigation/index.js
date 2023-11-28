@@ -6,7 +6,7 @@ import { BsFillCalendar2WeekFill } from "react-icons/bs";
 
 import "./index.css"
 function KanbasNavigation() {
-  const links = ["Account", "Dashboard", "Courses", "Calendar", "Inbox", "History", "Studio", "Commons", "Help"];
+  const links = ["Account", "Dashboard", "Courses", "Calendar", "Inbox", "History", "Studio", "Commons", "Help", "Signin", "Signup", "Account2", "admin/users"];
   const icons = {
     Account: <BiUserCircle className="wd-icon wd-user-icon" />,
     Dashboard: <RiDashboard3Fill className="wd-icon"/>,
@@ -16,7 +16,11 @@ function KanbasNavigation() {
     History: <FaHistory className="wd-icon" />,
     Studio: <FaCameraRetro className="wd-icon" />,
     Commons: <FaShareSquare className="wd-icon" />,
-    Help: <FaQuestionCircle className="wd-icon" />
+    Help: <FaQuestionCircle className="wd-icon" />,
+    Account2: <BiUserCircle className="wd-icon wd-user-icon" />,
+    Signin: <BiUserCircle className="wd-icon wd-user-icon" />,
+    Signup: <BiUserCircle className="wd-icon wd-user-icon" />,
+    Account: <BiUserCircle className="wd-icon wd-user-icon" />,
 }
 
   const { pathname } = useLocation(); 
